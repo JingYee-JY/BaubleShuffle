@@ -70,6 +70,10 @@ function showCup(){
     if(moving == false){
       cancelAnimationFrame(stop)
       let delay = setTimeout(()=>{
+        let all = document.querySelectorAll(".card-before .image")
+        all.forEach((items) => {
+          items.src = "./img/cup.png"
+        })
         moving = true
         closeCup()
         },1000)
@@ -117,6 +121,10 @@ function showObject(){
         if(card.y < cardShow){
             moving  = false
             card.style.top = cardShow + 'px';
+            let all = document.querySelectorAll(".card-before .image")
+            all.forEach((items) => {
+              items.src = "./img/tilt.png"
+            })
         }
     })
 }
@@ -526,15 +534,11 @@ function reval(){
         game.classList.add('hide')
         if(cups.length  == 1){
             final.style.backgroundImage = "url('./img/winBackground.png')"
-            show.innerHTML = "Great job!"
-            show.style.backgroundColor = "#FFF8E5"
-            show.style.color = "#FFB619"
+            show.src = "./img/winText.png"
         }
         if(cups.length  > 1){
             final.style.backgroundImage = "url('./img/loseBackground.png')"
-            show.innerHTML = "So close!"
-            show.style.backgroundColor = "#C4F3F4"
-            show.style.color = "#12BCC2"
+            show.src = "./img/loseText.png"
         }
         final.classList.remove("hide")
       }, 1000)
@@ -549,6 +553,10 @@ function reval(){
           if(card.y < cardShow){
               moving  = false
               card.style.top = cardShow + 'px';
+              let all = document.querySelectorAll(".star .card-before .image")
+              all.forEach((items) => {
+                items.src = "./img/tilt.png"
+              })
           }
       })
   }

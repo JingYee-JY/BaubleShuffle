@@ -16,6 +16,14 @@ body{
     position: fixed;
 }
 
+.backButton{
+    position: absolute;
+    width: 15%;
+    height: auto;
+    top: 10px;
+    left: 10px;
+}
+
 .back{
     position:absolute;
     top: 20%;
@@ -92,7 +100,7 @@ body{
     padding: 2%;
 }
 .starImage{
-    width: 78%;
+    width: 85%;
 }
 button{
     border: none;
@@ -117,6 +125,7 @@ button{
     background-size: 100% 100%;
 }
 .start{
+    position: relative;
     justify-content: center;
     background-image: url("./img/startBackground.png");
     z-index: 10;
@@ -192,7 +201,7 @@ button{
         transform: rotate(0deg) translateX(0px);
     }
 }*/
-.instruction,.show{
+.instruction{
     width: 100%;
     height: 100px;
     background-color: #FFE2A3;
@@ -209,8 +218,10 @@ button{
 }
 
 .show{
-    margin-top: 250px;
-    margin-bottom: 100px;
+    width: 60%;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 350px;
 }
 
 .maidText {
