@@ -341,10 +341,15 @@ button{
         width: 30vmin;
         height: 26vh;
     }
-    .instruction,.show{
+    .instruction{
         font-size: 60px;
         height: 200px;
     }
+    .show{
+        margin-top: 30px;
+        margin-bottom: 630px;
+    }
+    
 }
 
 /*desktop*/
@@ -374,8 +379,8 @@ button{
         max-width: 250px;
     }
     .show{
-        margin-top: 200px;
-        margin-bottom: 50px;
+        margin-top: 60px;
+        margin-bottom: 300px;
     }
 }
 
