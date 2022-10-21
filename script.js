@@ -11,7 +11,7 @@ const instruction = document.querySelector(".instruction")
 const card1 = document.querySelector(".card1")
 const card2 = document.querySelector(".card2")
 const card3 = document.querySelector(".card3")
-
+const additional = document.querySelector(".additional")
 /*const clickSound = document.getElementById("click")
 const completed = document.getElementById("completed")
 const lose = document.getElementById("lose")*/
@@ -143,16 +143,15 @@ function hideObject(){
 }
 
 function movingCard(){
+  let offsetUpDown
     if(border.width < 500){
-        offsetUp = 200
-        offsetDown = 100
+      offsetUpDown = 50
     }
     if(border.width > 500){
-        offsetUp = 400
-        offsetDown = 200
+      offsetUpDown = 100
     }
-    cardUp = (border.height / 2) - offsetUp
-    cardDown = (border.height / 2) - offsetDown
+    cardUp = cardY - offsetUpDown
+    cardDown = cardY + offsetUpDown
 
     console.log(cardY, cardDown)
     if(shuffleNumber == 1){
@@ -456,7 +455,7 @@ const matrixGenerator = (cardValues, size = 3) => {
         offestP1 = 90
         offestP2 = 54
         offestP3 = 18
-        offestY = 150
+        offestY = 110
         swap = 5
     }
     if(border.width > 500){
@@ -464,7 +463,7 @@ const matrixGenerator = (cardValues, size = 3) => {
         offestP1 = 230
         offestP2 = 154
         offestP3 = 86
-        offestY = 300
+        offestY = 250
         swap = 10
     }
     cardShow = (border.height / 2) - offestShow
@@ -503,7 +502,7 @@ const matrixGenerator = (cardValues, size = 3) => {
                 card.classList.add("flipped");
                 pickCard = true;
                 moving = true
-
+                instruction.classList.add("hide")
                 if(card.classList.contains("empty")){
                   //lose.currentTime = 0
                   //lose.play()    
@@ -534,11 +533,14 @@ function reval(){
         game.classList.add('hide')
         if(cups.length  == 1){
             final.style.backgroundImage = "url('./img/winBackground.png')"
-            show.src = "./img/winText.png"
+            show.innerHTML = "GREAT JOB!"
+            additional.classList.remove("hidden")
+            show.style.color = "#F9B116"
         }
         if(cups.length  > 1){
             final.style.backgroundImage = "url('./img/loseBackground.png')"
-            show.src = "./img/loseText.png"
+            show.innerHTML = "SO CLOSE!"
+            show.style.color = "white"
         }
         final.classList.remove("hide")
       }, 1000)
@@ -563,7 +565,7 @@ function reval(){
 
 startButton.addEventListener("click", () => {
   //playClickSound()
-    //let delay = setTimeout(() => {
+    let delay = setTimeout(() => {
       start.classList.add("hide");
       game.classList.remove("hide");
       began()
@@ -572,7 +574,7 @@ startButton.addEventListener("click", () => {
             moving = true
             showCup()
       },2000)
-    //}, 200);
+    }, 200);
 })
 
 againButton.addEventListener("click", () => {
@@ -580,8 +582,8 @@ againButton.addEventListener("click", () => {
     //let delay = setTimeout(() => {
       final.classList.add("hide")
       start.classList.remove("hide")
-      instruction.classList.add("hide")
       help.classList.remove("hide")
+      additional.classList.add("hidden")
       let all = document.querySelectorAll(".card-container")
       all.forEach((items) => {
         items.remove()

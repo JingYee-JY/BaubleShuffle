@@ -12,16 +12,17 @@
     <body>
         <div class="start">
             <img class="backButton" src="./img/back.png">
-            <img class="preview" src="./img/preview.png">
             <button class="startButton">
                 <p class="words">Play GAME</p>
             </button>
         </div>
         <div class="game hide">
+            <img class="table" src="./img/table.png">
             <div class="back">
                 <div class="detail">
                     <h1 class="highlight">How to Play</h1>
-                    <p>Find the bauble that has been shuffled.</p>
+                    <p>Look for the missing star</p>
+                    <p>to top the tree!</p>
                 </div>
             </div>
             <div class="instruction hide">Watch Carefully!</div>
@@ -35,7 +36,11 @@
             </div>
         </div>
         <div class="final hide">
-            <img class="show">
+            <div class="show"></div>
+            <div class="additional hidden">
+                <p>When you help people find</p>
+                <p>their way, you feel happy too!</p>
+            </div>
             <button class="playAgain">
                 <p class="words">Play again</p>
             </button>    
@@ -49,5 +54,13 @@
         <audio id="lose" src="./sound/lose.wav"></audio>-->
 
         <script src="script.js"></script>
+        <script>
+            const appHeight = () => {
+         const doc = document.documentElement
+         doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+            }
+            window.addEventListener('resize', appHeight)
+            appHeight()
+         </script>
     </body>
 </html>
