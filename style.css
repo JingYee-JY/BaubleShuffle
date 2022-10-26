@@ -54,7 +54,13 @@ body{
     height: auto;
 }
 
+
+.detail p{
+    font-size: 18px;
+}
+
 .highlight{
+    margin: 0px;
     font-size: 40px;
     color:white;
 }
@@ -138,9 +144,11 @@ button{
     height: auto;
     text-align: center;
     min-height: 100vh;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
 }
 .start{
+    background-position: bottom;
     position: relative;
     justify-content: center;
     background-image: url("./img/startBackground.png");
@@ -148,6 +156,7 @@ button{
 }
 
 .game{
+    background-position: top;
     justify-content: flex-end;
     position: relative;
     background-image: url("./img/gameBackground.png");
@@ -380,8 +389,11 @@ button{
         height: 200px;
     }
     .show{
-        margin-top: 30px;
-        margin-bottom: 630px;
+        margin:0%;
+    }
+    .additional{
+        margin-bottom: 550px;
+        font-size: 30px;
     }
     
 }

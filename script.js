@@ -145,7 +145,7 @@ function hideObject(){
 function movingCard(){
   let offsetUpDown
     if(border.width < 500){
-      offsetUpDown = 50
+      offsetUpDown = 45
     }
     if(border.width > 500){
       offsetUpDown = 100
