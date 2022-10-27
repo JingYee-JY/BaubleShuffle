@@ -451,7 +451,7 @@ const matrixGenerator = (cardValues, size = 3) => {
     border = gameContainer.getBoundingClientRect();
 
     if(border.width < 500){
-        offestShow = 300
+        offestShow = 350
         offestP1 = 90
         offestP2 = 54
         offestP3 = 18
