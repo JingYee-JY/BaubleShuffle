@@ -451,7 +451,7 @@ const matrixGenerator = (cardValues, size = 3) => {
     border = gameContainer.getBoundingClientRect();
 
     if(border.width < 500){
-        offestShow = 250
+        offestShow = 300
         offestP1 = 90
         offestP2 = 54
         offestP3 = 18
@@ -459,7 +459,7 @@ const matrixGenerator = (cardValues, size = 3) => {
         swap = 5
     }
     if(border.width > 500){
-        offestShow = 450
+        offestShow = 600
         offestP1 = 230
         offestP2 = 154
         offestP3 = 86

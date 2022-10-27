@@ -31,10 +31,11 @@ body{
 
 .back{
     position:absolute;
-    top: 35%;
-    height: auto;
+    top: 20%;
+    height: 150px;
     width: 90%;
     padding: 8% 0%;
+    padding-top: 2%;
     background-image: url("./img/helpBackground.png");
     background-size: 100% 100%;
     display: flex;
@@ -60,6 +61,7 @@ body{
 
 .highlight{
     margin: 0px;
+    margin-bottom: -10px;
     font-size: 40px;
     color:white;
 }
@@ -147,7 +149,7 @@ button{
     background-position: center;
 }
 .start{
-    background-position: bottom;
+    background-position: center;
     position: relative;
     justify-content: center;
     background-image: url("./img/startBackground.png");
@@ -155,15 +157,16 @@ button{
 }
 
 .game{
-    background-position: top;
+    background-position: center;
     justify-content: flex-end;
     position: relative;
     background-image: url("./img/gameBackground.png");
 }
 
 .final{
-    justify-content: center;
+    justify-content: top;
     background-image: url("./img/loseBackground.png");
+    background-position: top;
 }
 
 
@@ -248,6 +251,8 @@ button{
 
 .show{
     width: 100%;
+    margin-bottom: -10px;
+
     font-size: 55px;
     margin-top: 40px;
 }
@@ -368,13 +373,13 @@ button{
     }
     .back{
         top: 20%;
-        padding: 8% 0%;
+        height: 300px;
     }
     .highlight{
         font-size: 60px;
     }
     .detail p{
-        font-size: 50px;
+        font-size: 45px;
     }
     .card1,.card2,.card3{
         width:40vmin
@@ -384,11 +389,12 @@ button{
         height: 26vh;
     }
     .instruction{
+        top: 20%;
         font-size: 60px;
         height: 200px;
     }
     .show{
-        margin:0%;
+        margin-top: 120px;
     }
     .additional{
         margin-bottom: 550px;
@@ -402,7 +408,7 @@ button{
     body{
       width: 100%;
     }
-    .start,.game,.game-container, .final{
+    .start,.game,.game-container, .final,.table{
         max-width: 400px;
         margin: 0 auto;
     }
@@ -425,6 +431,9 @@ button{
     }
     .startButton{
         margin-top: 450px;
+    }
+    .show{
+        margin-top: 50px;
     }
     .back{
         top: 20%;
